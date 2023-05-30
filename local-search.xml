@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>MATLAB Cheat Sheet updating</title>
+    <link href="/2023/04/28/MATLAB%20Cheat%20Sheet/"/>
+    <url>/2023/04/28/MATLAB%20Cheat%20Sheet/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Basic-commands"><a href="#Basic-commands" class="headerlink" title="Basic commands"></a>Basic commands</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>clc</code></td><td>Clear command window</td></tr><tr><td><code>clear</code></td><td>Clear system memory</td></tr><tr><td><code>clear x</code></td><td>Clear x from memory</td></tr><tr><td><code>doc normally distributed numbers</code></td><td>Searching the documentation for a function that creates normally distributed numbers</td></tr></tbody></table><h2 id="Standard-Matrix-and-vector-operations"><a href="#Standard-Matrix-and-vector-operations" class="headerlink" title="Standard Matrix and vector operations"></a>Standard Matrix and vector operations</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>x = [1, 2, 3]</code> or <code>x=[1 2 3]</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = [1; 2; 3]</code></td><td>3x1 (Column) vector defined</td></tr><tr><td><code>x = [1, 2, 3; 4, 5, 6; 7, 8, 9]</code></td><td>3x3 matrix defined</td></tr><tr><td><code>x = 1:3</code> or <code>x = 1:1:3</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = linspace(1,3,3)</code></td><td>function to create vector <code>linspace(_first_,_last_,_number_of_elements_)</code></td></tr><tr><td><code>x = x&#39;</code></td><td>Transpose <code>x</code> from a row vector to a column vector using the transpose operator <code>&#39;</code></td></tr><tr><td><code>x = rand(3,3)</code> or <code>x = ones(3,3)</code> or <code>x = zeros(3,3)</code></td><td>Create a 3-by-3 matrix with (random, one, zero) numbers</td></tr><tr><td><code>size(x)</code></td><td>Get Rows and Columns</td></tr><tr><td><code>x(1,:)</code></td><td>Get first row of <code>x</code> matrix</td></tr><tr><td><code>x(:,1)</code></td><td>Get first colum of <code>x</code> matrix</td></tr><tr><td><code>x(end-1,1)</code></td><td>Get the second last row and 1st column</td></tr><tr><td><code>A = [5 6; 7 8]</code> <code>A(3)</code></td><td>If you use only one index with a matrix, MATLAB traverses down each column in order (this code returns the value <code>6</code>)</td></tr><tr><td><code>density([1 3 6])</code></td><td>Indices can be nonconsecutive numbers to extract the first, third, and sixth elements of <code>density</code></td></tr></tbody></table><h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><table><thead><tr><th>Operator</th><th>Purpose</th><th>Description</th></tr></thead><tbody><tr><td><code>+</code></td><td>Addition</td><td><code>A+B</code> adds <code>A</code> and <code>B</code></td></tr><tr><td><code>+</code></td><td>Unary plus</td><td><code>+A</code> rutruns <code>A</code></td></tr><tr><td><code>-</code></td><td>Subtraction</td><td><code>A-B</code> subtracts <code>B</code> from <code>A</code></td></tr><tr><td><code>-</code></td><td>Unary minus</td><td><code>-A</code> negates the elements of <code>A</code></td></tr><tr><td><code>.*</code></td><td>Element-wise multiplication</td><td><code>A.*B</code> is the element-by-element product of <code>A</code> and <code>B</code>.</td></tr><tr><td><code>.^</code></td><td>Element-wise power</td><td><code>A.^B</code> is the matrix with elements <code>A(i,j)</code> to the <code>B(i,j)</code> power.</td></tr><tr><td><code>./</code></td><td>Right array division</td><td><code>A./B</code> is the matrix with elements <code>A(i,j)/B(i,j)</code>.</td></tr><tr><td><code>.\</code></td><td>Left array division</td><td><code>A.\B</code> is the matrix with elements <code>B(i,j)/A(i,j)</code>.</td></tr><tr><td><code>.&#39;</code></td><td>Array transpose</td><td><code>A.&#39;</code> is the array transpose of <code>A</code>. For complex matrices, this does not involve conjugation.</td></tr><tr><td><code>~</code></td><td>Ignore output from a function</td><td><code>[~,ivMax] = max(v2)</code> <code>~</code> ignore the first output from <code>max()</code> function</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>MATLAB</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MATLAB</tag>
+      
+      <tag>Cheat Sheet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Model-Based Reinforcement Learning: A Survey</title>
     <link href="/2022/06/26/model-based%20reinforcement%20learning/"/>
     <url>/2022/06/26/model-based%20reinforcement%20learning/</url>
@@ -25,33 +52,6 @@
       <tag>RL</tag>
       
       <tag>Paper</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>First Post</title>
-    <link href="/2022/06/25/first-post/"/>
-    <url>/2022/06/25/first-post/</url>
-    
-    <content type="html"><![CDATA[<p>This is my first post in the blog</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Life</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>tag1</tag>
-      
-      <tag>tag2</tag>
       
     </tags>
     
