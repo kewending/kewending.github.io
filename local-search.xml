@@ -4,6 +4,112 @@
   
   
   <entry>
+    <title>Deep Learning Term</title>
+    <link href="/2024/04/03/Deep%20Learning%20Term/"/>
+    <url>/2024/04/03/Deep%20Learning%20Term/</url>
+    
+    <content type="html"><![CDATA[<h4 id="Independently-and-identically-distributed-i-i-d"><a href="#Independently-and-identically-distributed-i-i-d" class="headerlink" title="Independently and identically distributed (i.i.d.)"></a>Independently and identically distributed (i.i.d.)</h4><ol><li><strong>Independent Events</strong>:<ul><li>When we talk about <strong>independent events</strong>, we’re referring to the relationship between observations in a sample.</li><li><strong>Independence</strong> means that observing the current item does not influence or provide insight about the value of the next item you measure, or any other items in the sample.</li><li>For instance, when flipping a coin, each toss is independent. The outcome of one toss doesn’t predict the next outcome.</li><li>Independence relates to how you define your population and the process of obtaining your sample. Random sampling is essential to ensure independence.</li></ul></li><li><strong>Identically Distributed</strong>:<ul><li><strong>Identically distributed</strong> refers to the probability distribution that describes the characteristic you’re measuring.</li><li>Specifically, one probability distribution should adequately model all the values you observe in a sample.</li><li>A dataset should not exhibit trends because trends indicate that one probability distribution does not describe all the data.</li><li>In simpler terms, the same underlying distribution governs all the data points.</li></ul></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Term</tag>
+      
+      <tag>Machine-Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Dive into Deep Learning Chapter 1</title>
+    <link href="/2024/04/03/Dive%20into%20Deep%20Learning%20Chapter%201/"/>
+    <url>/2024/04/03/Dive%20into%20Deep%20Learning%20Chapter%201/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><em><strong>Machine learning</strong></em> is the study of algorithms that can learn from experience. In this book <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Dive into Deep Learning](https://d2l.ai/)">[1]</span></a></sup>, it will teach you the fundamentals of machine learning, focusing in particular on <em><strong>Deep learning</strong></em>.</p><h3 id="A-Motivating-Example"><a href="#A-Motivating-Example" class="headerlink" title="A Motivating Example"></a>A Motivating Example</h3><p>In the currently dominant approach to machine learning, we do not attempt to design a system explicitly how to map from inputs to outputs. Instead, we define a flexible program whose behavior is determined by a number of <em><strong>parameters</strong></em>. Then we use the dataset to determine the best possible parameter values, i.e., those that improve the performance of our program with respect to a chosen performance measure.</p><p>We can think of the parameters as knobs that we can turn, manipulating the behavior of the program. Once the parameters are fixed, we call the program a <em><strong>model</strong></em>. The set of all distinct programs (input–output mappings) that we can produce just by manipulating the parameters is called a <em><strong>family of models</strong></em>. And the “<em><strong>meta-program</strong></em>” that uses our dataset to choose the parameters is called a <em><strong>learning algorithm</strong></em>.</p><p>Before we can go ahead and engage the learning algorithm, we have to <strong>define the problem</strong> precisely, pinning down the exact nature of the <strong>inputs</strong> and <strong>outputs</strong>, and choosing an appropriate model family.</p><p>In machine learning, the <em><strong>learning</strong></em> is the process by which we discover the right setting of the knobs for coercing the desired behavior from our model. In other words, we <em><strong>train</strong></em> our model with data.</p><p><img src="/img/Training-Process.PNG"></p><p>Deep learning is just one among many popular methods for solving machine learning problems.</p><h3 id="Key-Components"><a href="#Key-Components" class="headerlink" title="Key Components"></a>Key Components</h3><ol><li>The <em><strong>data</strong></em> that we can learn from.</li><li>A <em><strong>model</strong></em> of how to transform the data.</li><li>An <em><strong>objective function</strong></em> that quantifies how well (or badly) the model is doing.</li><li>An <em><strong>algorithm</strong></em> to adjust the model’s parameters to optimize the objective function.</li></ol><h4 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h4><p>Generally, we are concerned with a collection of examples. They should follow <em><strong>independently and identically distributed</strong></em>, (i.i.d). In order to work with data usefully, we typically need to come up with a suitable numerical representation. Each example (or <em><strong>data point</strong></em>, <em><strong>data instance</strong></em>, sample) typically consists of a set of attributes called <em><strong>features</strong></em> (sometimes called <em><strong>covariates</strong></em> or inputs)</p><p>When every example is characterized by the same number of numerical features, we say that the inputs are fixed-length vectors and we call the (constant) length of the vectors the <em><strong>dimensionality</strong></em> of the data. However, not all data can easily be represented as <em><strong>fixed-length</strong></em> vectors. </p><p>One major advantage of deep learning over traditional methods is that models can handle varying-length data. However, many of the most exciting models in deep learning do not work without large datasets. Some others might work in the small data regime, but are no better than traditional approaches.</p><p>Finally, it is not enough to have lots of data and to process it cleverly. We need the <em><strong>right data</strong></em>. One commonly occurring failure model concerns datasets where some groups of sample are unrepresented in the training data. Failure can also occur when the data does not only under-represent some groups but reflects societal prejudices. In other words, the model’s end result reflects our human being.</p><h4 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h4><p>By <em><strong>model</strong></em>, we denote the computational machinery for ingesting data of one type, and spitting out predictions of a possibly different type. In particular, we are interested in <em><strong>statistical models</strong></em> that can be estimated from data. Deep learning is differentiated from classical approaches principally by the set of powerful models that it focuses on. These models consist of many successive transformations of the data that are chained together top to bottom, thus the name <em><strong>deep learning</strong></em>.</p><h4 id="Objective-Functions"><a href="#Objective-Functions" class="headerlink" title="Objective Functions"></a>Objective Functions</h4><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://d2l.ai/">Dive into Deep Learning</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Introduction</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LaTeX Symbol List</title>
+    <link href="/2024/04/03/LaTeX%20Symbol%20List/"/>
+    <url>/2024/04/03/LaTeX%20Symbol%20List/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://mirror.cse.unsw.edu.au/pub/CTAN/info/symbols/comprehensive/symbols-a4.pdf#page=1">The Comprehensive LaTeX Symbol List</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Symbol</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Notation</tag>
+      
+      <tag>Symbol</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Deep Learning Notation</title>
+    <link href="/2024/04/03/Deep%20Learning%20Notation/"/>
+    <url>/2024/04/03/Deep%20Learning%20Notation/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Numerical-Objects"><a href="#Numerical-Objects" class="headerlink" title="Numerical Objects"></a>Numerical Objects</h2><table><thead><tr><th>Symbol</th><th>Meaning</th><th>LaTeX Notation</th></tr></thead><tbody><tr><td>$x$</td><td>A scalar</td><td><code>$x$</code></td></tr><tr><td>$X$</td><td>A vector</td><td><code>$X$</code></td></tr><tr><td>$\mathbf{X}$</td><td>A matrix</td><td><code>$\mathbf&#123;X&#125;$</code></td></tr><tr><td>$\mathsf{X}$</td><td>A general tensor</td><td><code>$\mathsf&#123;X&#125;$</code></td></tr><tr><td>$\mathbf{I}$</td><td>The identity matrix</td><td><code>$\mathbf&#123;I&#125;$</code></td></tr><tr><td>$x_{ij}$, $x_{i,j}$, $[X]<em>{ij}$, $[X]</em>{i,j}$</td><td>The element of matrix $\mathbf{X}$ at row $𝑖$ and column $𝑗$</td><td><code>$x_&#123;ij&#125;$, $x_&#123;i,j&#125;$, $[X]_&#123;ij&#125;$, $[X]_&#123;i,j&#125;$</code></td></tr></tbody></table><h2 id="Set-Theory"><a href="#Set-Theory" class="headerlink" title="Set Theory"></a>Set Theory</h2><table><thead><tr><th>Symbol</th><th>Meaning</th><th>LaTeX Notation</th></tr></thead><tbody><tr><td>$\mathcal{X}$</td><td>A set</td><td><code>$\mathcal&#123;X&#125;$</code></td></tr><tr><td>$\mathbb{Z}$</td><td>The set of integers</td><td><code>$\mathbb&#123;Z&#125;$</code></td></tr><tr><td>$\mathbb{Z}^+$</td><td>The set of positive integers</td><td><code>$\mathbb&#123;Z&#125;^+$</code></td></tr><tr><td>$\mathbb{R}$</td><td>The set of real numbers</td><td><code>$\mathsf&#123;X&#125;$</code></td></tr><tr><td>$\mathbb{R}^n$</td><td>the set of 𝑛-dimensional vectors of real numbers</td><td><code>$\mathbb&#123;R&#125;^n$</code></td></tr><tr><td>$\mathbb{R}^{a\times b}$</td><td>The set of matrices of real numbers with $𝑎$ rows and $𝑏$ columns</td><td><code>$\mathbb&#123;R&#125;^&#123;a\times b&#125;$</code></td></tr><tr><td>$\lvert\mathcal{X}\rvert$</td><td>Cardinality (number of elements) of set $\mathcal{X}$</td><td><code>$\lvert\mathcal&#123;X&#125;\rvert$</code></td></tr><tr><td>$\mathcal{A}\cup\mathcal{B}$</td><td>Union of sets A and B</td><td><code>$\mathcal&#123;A&#125;\cup\mathcal&#123;B&#125;$</code></td></tr><tr><td>$\mathcal{A}\cap\mathcal{B}$</td><td>Intersection of sets A and B</td><td><code>$\mathcal&#123;A&#125;\cap\mathcal&#123;B&#125;$</code></td></tr><tr><td>$\mathcal{A}\setminus \mathcal{B}$</td><td>Set subtraction of B from A</td><td><code>$\mathcal&#123;A&#125;\setminus \mathcal&#123;B&#125;$</code></td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Machine-Learning</tag>
+      
+      <tag>Notation</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Search Engine Optimization</title>
     <link href="/2024/04/02/Search%20Engine%20Optimization/"/>
     <url>/2024/04/02/Search%20Engine%20Optimization/</url>
@@ -22,7 +128,7 @@
       
       <tag>website</tag>
       
-      <tag>seo</tag>
+      <tag>SEO</tag>
       
     </tags>
     
@@ -50,6 +156,33 @@
       <tag>Life</tag>
       
       <tag>Sentence</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MATLAB Cheat Sheet updating</title>
+    <link href="/2024/04/02/MATLAB%20Cheat%20Sheet/"/>
+    <url>/2024/04/02/MATLAB%20Cheat%20Sheet/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Basic-commands"><a href="#Basic-commands" class="headerlink" title="Basic commands"></a>Basic commands</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>clc</code></td><td>Clear command window</td></tr><tr><td><code>clear</code></td><td>Clear system memory</td></tr><tr><td><code>clear x</code></td><td>Clear x from memory</td></tr><tr><td><code>doc normally distributed numbers</code></td><td>Searching the documentation for a function that creates normally distributed numbers</td></tr></tbody></table><h2 id="Standard-Matrix-and-vector-operations"><a href="#Standard-Matrix-and-vector-operations" class="headerlink" title="Standard Matrix and vector operations"></a>Standard Matrix and vector operations</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>x = [1, 2, 3]</code> or <code>x=[1 2 3]</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = [1; 2; 3]</code></td><td>3x1 (Column) vector defined</td></tr><tr><td><code>x = [1, 2, 3; 4, 5, 6; 7, 8, 9]</code></td><td>3x3 matrix defined</td></tr><tr><td><code>x = 1:3</code> or <code>x = 1:1:3</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = linspace(1,3,3)</code></td><td>function to create vector <code>linspace(_first_,_last_,_number_of_elements_)</code></td></tr><tr><td><code>x = x&#39;</code></td><td>Transpose <code>x</code> from a row vector to a column vector using the transpose operator <code>&#39;</code></td></tr><tr><td><code>x = rand(3,3)</code> or <code>x = ones(3,3)</code> or <code>x = zeros(3,3)</code></td><td>Create a 3-by-3 matrix with (random, one, zero) numbers</td></tr><tr><td><code>size(x)</code></td><td>Get Rows and Columns</td></tr><tr><td><code>x(1,:)</code></td><td>Get first row of <code>x</code> matrix</td></tr><tr><td><code>x(:,1)</code></td><td>Get first colum of <code>x</code> matrix</td></tr><tr><td><code>x(end-1,1)</code></td><td>Get the second last row and 1st column</td></tr><tr><td><code>A = [5 6; 7 8]</code> <code>A(3)</code></td><td>If you use only one index with a matrix, MATLAB traverses down each column in order (this code returns the value <code>6</code>)</td></tr><tr><td><code>density([1 3 6])</code></td><td>Indices can be nonconsecutive numbers to extract the first, third, and sixth elements of <code>density</code></td></tr></tbody></table><h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><table><thead><tr><th>Operator</th><th>Purpose</th><th>Description</th></tr></thead><tbody><tr><td><code>+</code></td><td>Addition</td><td><code>A+B</code> adds <code>A</code> and <code>B</code></td></tr><tr><td><code>+</code></td><td>Unary plus</td><td><code>+A</code> rutruns <code>A</code></td></tr><tr><td><code>-</code></td><td>Subtraction</td><td><code>A-B</code> subtracts <code>B</code> from <code>A</code></td></tr><tr><td><code>-</code></td><td>Unary minus</td><td><code>-A</code> negates the elements of <code>A</code></td></tr><tr><td><code>.*</code></td><td>Element-wise multiplication</td><td><code>A.*B</code> is the element-by-element product of <code>A</code> and <code>B</code>.</td></tr><tr><td><code>.^</code></td><td>Element-wise power</td><td><code>A.^B</code> is the matrix with elements <code>A(i,j)</code> to the <code>B(i,j)</code> power.</td></tr><tr><td><code>./</code></td><td>Right array division</td><td><code>A./B</code> is the matrix with elements <code>A(i,j)/B(i,j)</code>.</td></tr><tr><td><code>.\</code></td><td>Left array division</td><td><code>A.\B</code> is the matrix with elements <code>B(i,j)/A(i,j)</code>.</td></tr><tr><td><code>.&#39;</code></td><td>Array transpose</td><td><code>A.&#39;</code> is the array transpose of <code>A</code>. For complex matrices, this does not involve conjugation.</td></tr><tr><td><code>~</code></td><td>Ignore output from a function</td><td><code>[~,ivMax] = max(v2)</code> <code>~</code> ignore the first output from <code>max()</code> function</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>MATLAB</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MATLAB</tag>
+      
+      <tag>Cheat-Sheet</tag>
       
     </tags>
     
@@ -189,33 +322,6 @@
       <tag>Finance</tag>
       
       <tag>Broker</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>MATLAB Cheat Sheet updating</title>
-    <link href="/2023/04/28/MATLAB%20Cheat%20Sheet/"/>
-    <url>/2023/04/28/MATLAB%20Cheat%20Sheet/</url>
-    
-    <content type="html"><![CDATA[<h2 id="Basic-commands"><a href="#Basic-commands" class="headerlink" title="Basic commands"></a>Basic commands</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>clc</code></td><td>Clear command window</td></tr><tr><td><code>clear</code></td><td>Clear system memory</td></tr><tr><td><code>clear x</code></td><td>Clear x from memory</td></tr><tr><td><code>doc normally distributed numbers</code></td><td>Searching the documentation for a function that creates normally distributed numbers</td></tr></tbody></table><h2 id="Standard-Matrix-and-vector-operations"><a href="#Standard-Matrix-and-vector-operations" class="headerlink" title="Standard Matrix and vector operations"></a>Standard Matrix and vector operations</h2><table><thead><tr><th>Commands</th><th>Description</th></tr></thead><tbody><tr><td><code>x = [1, 2, 3]</code> or <code>x=[1 2 3]</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = [1; 2; 3]</code></td><td>3x1 (Column) vector defined</td></tr><tr><td><code>x = [1, 2, 3; 4, 5, 6; 7, 8, 9]</code></td><td>3x3 matrix defined</td></tr><tr><td><code>x = 1:3</code> or <code>x = 1:1:3</code></td><td>1x3 (Row) vector defined</td></tr><tr><td><code>x = linspace(1,3,3)</code></td><td>function to create vector <code>linspace(_first_,_last_,_number_of_elements_)</code></td></tr><tr><td><code>x = x&#39;</code></td><td>Transpose <code>x</code> from a row vector to a column vector using the transpose operator <code>&#39;</code></td></tr><tr><td><code>x = rand(3,3)</code> or <code>x = ones(3,3)</code> or <code>x = zeros(3,3)</code></td><td>Create a 3-by-3 matrix with (random, one, zero) numbers</td></tr><tr><td><code>size(x)</code></td><td>Get Rows and Columns</td></tr><tr><td><code>x(1,:)</code></td><td>Get first row of <code>x</code> matrix</td></tr><tr><td><code>x(:,1)</code></td><td>Get first colum of <code>x</code> matrix</td></tr><tr><td><code>x(end-1,1)</code></td><td>Get the second last row and 1st column</td></tr><tr><td><code>A = [5 6; 7 8]</code> <code>A(3)</code></td><td>If you use only one index with a matrix, MATLAB traverses down each column in order (this code returns the value <code>6</code>)</td></tr><tr><td><code>density([1 3 6])</code></td><td>Indices can be nonconsecutive numbers to extract the first, third, and sixth elements of <code>density</code></td></tr></tbody></table><h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><table><thead><tr><th>Operator</th><th>Purpose</th><th>Description</th></tr></thead><tbody><tr><td><code>+</code></td><td>Addition</td><td><code>A+B</code> adds <code>A</code> and <code>B</code></td></tr><tr><td><code>+</code></td><td>Unary plus</td><td><code>+A</code> rutruns <code>A</code></td></tr><tr><td><code>-</code></td><td>Subtraction</td><td><code>A-B</code> subtracts <code>B</code> from <code>A</code></td></tr><tr><td><code>-</code></td><td>Unary minus</td><td><code>-A</code> negates the elements of <code>A</code></td></tr><tr><td><code>.*</code></td><td>Element-wise multiplication</td><td><code>A.*B</code> is the element-by-element product of <code>A</code> and <code>B</code>.</td></tr><tr><td><code>.^</code></td><td>Element-wise power</td><td><code>A.^B</code> is the matrix with elements <code>A(i,j)</code> to the <code>B(i,j)</code> power.</td></tr><tr><td><code>./</code></td><td>Right array division</td><td><code>A./B</code> is the matrix with elements <code>A(i,j)/B(i,j)</code>.</td></tr><tr><td><code>.\</code></td><td>Left array division</td><td><code>A.\B</code> is the matrix with elements <code>B(i,j)/A(i,j)</code>.</td></tr><tr><td><code>.&#39;</code></td><td>Array transpose</td><td><code>A.&#39;</code> is the array transpose of <code>A</code>. For complex matrices, this does not involve conjugation.</td></tr><tr><td><code>~</code></td><td>Ignore output from a function</td><td><code>[~,ivMax] = max(v2)</code> <code>~</code> ignore the first output from <code>max()</code> function</td></tr></tbody></table>]]></content>
-    
-    
-    <categories>
-      
-      <category>MATLAB</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>MATLAB</tag>
-      
-      <tag>Cheat Sheet</tag>
       
     </tags>
     

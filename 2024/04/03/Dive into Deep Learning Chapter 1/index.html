@@ -16,22 +16,20 @@
   <meta name="author" content="Kewen Ding">
   <meta name="keywords" content="">
   
-    <meta name="description" content="This blog is my brief summary about this survery paper. [1] IntroductionThe above figure shows an overview of possible algorithmic connections between planning and learning.   (a) plan over a learned">
+    <meta name="description" content="IntroductionMachine learning is the study of algorithms that can learn from experience. In this book [1], it will teach you the fundamentals of machine learning, focusing in particular on Deep learnin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Model-Based Reinforcement Learning: A Survey">
-<meta property="og:url" content="https://github.com/kewending/kewending.github.io/2022/06/26/model-based%20reinforcement%20learning/index.html">
+<meta property="og:title" content="Dive into Deep Learning Chapter 1">
+<meta property="og:url" content="https://github.com/kewending/kewending.github.io/2024/04/03/Dive%20into%20Deep%20Learning%20Chapter%201/index.html">
 <meta property="og:site_name" content="Kewen Ding&#39;s Blog">
-<meta property="og:description" content="This blog is my brief summary about this survery paper. [1] IntroductionThe above figure shows an overview of possible algorithmic connections between planning and learning.   (a) plan over a learned">
+<meta property="og:description" content="IntroductionMachine learning is the study of algorithms that can learn from experience. In this book [1], it will teach you the fundamentals of machine learning, focusing in particular on Deep learnin">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/img/Planning-and-Learning.png">
-<meta property="article:published_time" content="2022-06-26T02:56:45.043Z">
-<meta property="article:modified_time" content="2023-04-28T00:00:55.666Z">
+<meta property="og:image" content="https://github.com/img/d2l.jpg">
+<meta property="article:published_time" content="2024-04-03T01:46:41.033Z">
+<meta property="article:modified_time" content="2024-04-03T03:50:05.828Z">
 <meta property="article:author" content="Kewen Ding">
-<meta property="article:tag" content="Model-Based">
-<meta property="article:tag" content="RL">
-<meta property="article:tag" content="Paper">
+<meta property="article:tag" content="Introduction">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://github.com/img/Planning-and-Learning.png">
+<meta name="twitter:image" content="https://github.com/img/d2l.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -40,7 +38,7 @@
      <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J018EM7ZS"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date());
 gtag("config", "G-4J018EM7ZS"); </script> 
   
-  <title>Model-Based Reinforcement Learning: A Survey - Kewen Ding&#39;s Blog</title>
+  <title>Dive into Deep Learning Chapter 1 - Kewen Ding&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -245,7 +243,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Model-Based Reinforcement Learning: A Survey"></span>
+            <span id="subtitle" data-typed-text="Dive into Deep Learning Chapter 1"></span>
           
         </div>
 
@@ -256,8 +254,8 @@ gtag("config", "G-4J018EM7ZS"); </script>
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-26 12:56" pubdate>
-          June 26, 2022
+        <time datetime="2024-04-03 12:46" pubdate>
+          April 3, 2024
         </time>
       </span>
     
@@ -268,7 +266,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.2k words
+          3.1k words
         
       </span>
     
@@ -279,7 +277,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
         
         
         
-          27 mins
+          26 mins
         
       </span>
     
@@ -325,69 +323,30 @@ gtag("config", "G-4J018EM7ZS"); </script>
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Model-Based Reinforcement Learning: A Survey</h1>
+            <h1 style="display: none">Dive into Deep Learning Chapter 1</h1>
             
             
               <div class="markdown-body">
                 
-                <p>This blog is my brief summary about this survery paper. <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Moerland, T. M., Broekens, J., Plaat, A., & Jonker, C. M. (2022). Model-based Reinforcement Learning: A Survey (No. arXiv:2006.16712). arXiv. doi: 10.48550/arXiv.2006.16712">[1]</span></a></sup></p>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="/img/Planning-and-Learning.png" srcset="/img/loading.gif" lazyload><br><strong>The above figure shows an overview of possible algorithmic connections between planning and learning.</strong> </p>
-<ul>
-<li>(a) plan over a learned model</li>
-<li>(b) use information from a policy&#x2F;value function to improve planning</li>
-<li>(c) use the result from planning to train the policy&#x2F;value function</li>
-<li>(d) act in the environment based on the planning outcome</li>
-<li>(e) act in the environment based on policy&#x2F;value function</li>
-<li>(f) train the policy&#x2F;value function based on experience</li>
-<li>(g) train the model based on experience</li>
-</ul>
-<h4 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h4><p><em>Reversible access</em> the MDP dynamics is repeatedly planning forward from the same state (Planning methods, humans plan in their mind).</p>
-<p><em>Irreversible access</em> to the MDP means that the agents has to move forward from the resulting next state after executing a particular action. (Model-free methods, human act in the real world)</p>
-<p><em>Model</em> is a form of reverisble access to the MDP dynamics (known or learned)</p>
-<p><em>Local solution</em> only stores the solution for a subset of all states. (Planning method)</p>
-<p><em>Global solution</em> stores the value&#x2F;policy function for the entire state space. (Learning method)</p>
-<p><em>Planning</em> is a class of MDP algorithms that 1) use a model and 2) store a local solution. </p>
-<p><em>Reinforcement learning</em> is a class of MDP algorithms that store a global solution.</p>
-<p><em>Model-based reinforcement learning</em> is a class of MDP algorithms that 1) use a model, and 2) store a global solution.</p>
-<h3 id="Categories-of-planning-learning-integration"><a href="#Categories-of-planning-learning-integration" class="headerlink" title="Categories of planning-learning integration"></a>Categories of planning-learning integration</h3><ul>
-<li>Model-based RL with a learned model, where we both learn a model and learn a global solution. (Dyna)</li>
-<li>Model-based RL with a known model, where we plan over a known model, and only use learning for the global solution. (AlphaZero, Dynamic Programming)</li>
-<li>Planning over a learned model, where we do learn a model, but subsequently locally plan over it, without learning a global solution.</li>
-</ul>
-<h3 id="Dynamics-Model-Learning"><a href="#Dynamics-Model-Learning" class="headerlink" title="Dynamics Model Learning"></a>Dynamics Model Learning</h3><p>Model learning is essentially a supervised learning problem<br><em>Dynamics models</em> is to learn the transition probabilities between states.</p>
-<h4 id="Type-of-model"><a href="#Type-of-model" class="headerlink" title="Type of model"></a>Type of model</h4><ul>
-<li>Forward model: $(s_t,a_t)\rightarrow s_{t+1}$<br>  Most commeon model can be used for lookahead planning.</li>
-<li>Backward&#x2F;revers model: $s_{t+1}\rightarrow (s_t,a_t)$<br> Plan in the backwards direcion (Prioritized sweeping)</li>
-<li>Inverse model: $(s_t,s_{t+1})\rightarrow a_t$<br>  Useful in representation learning (RRT planning)</li>
-</ul>
-<h4 id="Type-of-approximation-method"><a href="#Type-of-approximation-method" class="headerlink" title="Type of approximation method"></a>Type of approximation method</h4><ul>
-<li><em>Parametric</em>: The number of parameters is independent of the size of the observed dataset.<ul>
-<li><em>Exact</em>: For a discrete MDP (or a discretized version of a continuous MDP), a tabular method maintains a separate entry for every possible transition. However, they don not scale to high-dimensional problems (the curse of dimensionlity)<ul>
-<li>Tabular maximum likelihood model<br>  $$T(s^\prime|s,a) &#x3D; \frac{n(s,a,s^\prime)}{\sum_{s^\prime} n(s,a,s^\prime)}$$</li>
-</ul>
-</li>
-<li><em>Approximate</em>: Function approximation methods lower the required number of parameters and allow for generalization. <ul>
-<li>Linear Regression</li>
-<li>Dynamic Bayesian networks (DBN)</li>
-<li>Nearst Neighbours</li>
-<li>Random forests</li>
-<li>Support vector regression</li>
-<li>Neural Networks</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><em>Non-parametric</em>: Directly store and use the data to represent the model. And the computational complexity of non-parametric methods depends on the size of the dataset. So less applicable to high-dimension problems where normal require more data<ul>
-<li><em>Exact</em>: Replay buffers</li>
-<li><em>Approximate</em>: Gaussian processes</li>
-</ul>
-</li>
-</ul>
-<h4 id="The-region-of-state-space"><a href="#The-region-of-state-space" class="headerlink" title="The region of state space"></a>The region of state space</h4><ul>
-<li>Global: Approcimate the dynamics over the entire state space. (Main approach)</li>
-<li>Local: Locally approximate the dynamics and discard the local model after  planning over it.</li>
-</ul>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Moerland, T. M., Broekens, J., Plaat, A., &amp; Jonker, C. M. (2022). Model-based Reinforcement Learning: A Survey (No. arXiv:2006.16712). arXiv. doi: 10.48550&#x2F;arXiv.2006.16712
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><em><strong>Machine learning</strong></em> is the study of algorithms that can learn from experience. In this book <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Dive into Deep Learning](https://d2l.ai/)">[1]</span></a></sup>, it will teach you the fundamentals of machine learning, focusing in particular on <em><strong>Deep learning</strong></em>.</p>
+<h3 id="A-Motivating-Example"><a href="#A-Motivating-Example" class="headerlink" title="A Motivating Example"></a>A Motivating Example</h3><p>In the currently dominant approach to machine learning, we do not attempt to design a system explicitly how to map from inputs to outputs. Instead, we define a flexible program whose behavior is determined by a number of <em><strong>parameters</strong></em>. Then we use the dataset to determine the best possible parameter values, i.e., those that improve the performance of our program with respect to a chosen performance measure.</p>
+<p>We can think of the parameters as knobs that we can turn, manipulating the behavior of the program. Once the parameters are fixed, we call the program a <em><strong>model</strong></em>. The set of all distinct programs (input–output mappings) that we can produce just by manipulating the parameters is called a <em><strong>family of models</strong></em>. And the “<em><strong>meta-program</strong></em>” that uses our dataset to choose the parameters is called a <em><strong>learning algorithm</strong></em>.</p>
+<p>Before we can go ahead and engage the learning algorithm, we have to <strong>define the problem</strong> precisely, pinning down the exact nature of the <strong>inputs</strong> and <strong>outputs</strong>, and choosing an appropriate model family.</p>
+<p>In machine learning, the <em><strong>learning</strong></em> is the process by which we discover the right setting of the knobs for coercing the desired behavior from our model. In other words, we <em><strong>train</strong></em> our model with data.</p>
+<p><img src="/img/Training-Process.PNG" srcset="/img/loading.gif" lazyload></p>
+<p>Deep learning is just one among many popular methods for solving machine learning problems.</p>
+<h3 id="Key-Components"><a href="#Key-Components" class="headerlink" title="Key Components"></a>Key Components</h3><ol>
+<li>The <em><strong>data</strong></em> that we can learn from.</li>
+<li>A <em><strong>model</strong></em> of how to transform the data.</li>
+<li>An <em><strong>objective function</strong></em> that quantifies how well (or badly) the model is doing.</li>
+<li>An <em><strong>algorithm</strong></em> to adjust the model’s parameters to optimize the objective function.</li>
+</ol>
+<h4 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h4><p>Generally, we are concerned with a collection of examples. They should follow <em><strong>independently and identically distributed</strong></em>, (i.i.d). In order to work with data usefully, we typically need to come up with a suitable numerical representation. Each example (or <em><strong>data point</strong></em>, <em><strong>data instance</strong></em>, sample) typically consists of a set of attributes called <em><strong>features</strong></em> (sometimes called <em><strong>covariates</strong></em> or inputs)</p>
+<p>When every example is characterized by the same number of numerical features, we say that the inputs are fixed-length vectors and we call the (constant) length of the vectors the <em><strong>dimensionality</strong></em> of the data. However, not all data can easily be represented as <em><strong>fixed-length</strong></em> vectors. </p>
+<p>One major advantage of deep learning over traditional methods is that models can handle varying-length data. However, many of the most exciting models in deep learning do not work without large datasets. Some others might work in the small data regime, but are no better than traditional approaches.</p>
+<p>Finally, it is not enough to have lots of data and to process it cleverly. We need the <em><strong>right data</strong></em>. One commonly occurring failure model concerns datasets where some groups of sample are unrepresented in the training data. Failure can also occur when the data does not only under-represent some groups but reflects societal prejudices. In other words, the model’s end result reflects our human being.</p>
+<h4 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h4><p>By <em><strong>model</strong></em>, we denote the computational machinery for ingesting data of one type, and spitting out predictions of a possibly different type. In particular, we are interested in <em><strong>statistical models</strong></em> that can be estimated from data. Deep learning is differentiated from classical approaches principally by the set of powerful models that it focuses on. These models consist of many successive transformations of the data that are chained together top to bottom, thus the name <em><strong>deep learning</strong></em>.</p>
+<h4 id="Objective-Functions"><a href="#Objective-Functions" class="headerlink" title="Objective Functions"></a>Objective Functions</h4><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://d2l.ai/">Dive into Deep Learning</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
@@ -406,7 +365,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
     
       <span class="category-chain">
         
-  <a href="/categories/Reinforcement-Learning/" class="category-chain-item">Reinforcement Learning</a>
+  <a href="/categories/Deep-Learning/" class="category-chain-item">Deep Learning</a>
   
   
 
@@ -421,11 +380,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Model-Based/">#Model-Based</a>
-      
-        <a href="/tags/RL/">#RL</a>
-      
-        <a href="/tags/Paper/">#Paper</a>
+        <a href="/tags/Introduction/">#Introduction</a>
       
     </div>
   
@@ -437,8 +392,8 @@ gtag("config", "G-4J018EM7ZS"); </script>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Model-Based Reinforcement Learning: A Survey</div>
-      <div>https://github.com/kewending/kewending.github.io/2022/06/26/model-based reinforcement learning/</div>
+      <div>Dive into Deep Learning Chapter 1</div>
+      <div>https://github.com/kewending/kewending.github.io/2024/04/03/Dive into Deep Learning Chapter 1/</div>
     </div>
     <div class="license-meta">
       
@@ -450,13 +405,13 @@ gtag("config", "G-4J018EM7ZS"); </script>
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>June 26, 2022</div>
+          <div>April 3, 2024</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>April 28, 2023</div>
+          <div>April 3, 2024</div>
         </div>
       
       <div class="license-meta-item">
@@ -485,9 +440,9 @@ gtag("config", "G-4J018EM7ZS"); </script>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/06/02/Australia%20Brokers/" title="Australia Brokers updating">
+                      <a href="/2024/04/03/Deep%20Learning%20Term/" title="Deep Learning Term">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Australia Brokers updating</span>
+                        <span class="hidden-mobile">Deep Learning Term</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -495,8 +450,8 @@ gtag("config", "G-4J018EM7ZS"); </script>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/25/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/04/03/LaTeX%20Symbol%20List/" title="LaTeX Symbol List">
+                        <span class="hidden-mobile">LaTeX Symbol List</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
