@@ -16,19 +16,21 @@
   <meta name="author" content="Kewen Ding">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Independently and identically distributed (i.i.d.) Independent Events: When we talk about independent events, we’re referring to the relationship between observations in a sample. Independence means t">
+    <meta name="description" content="Basic TermEpochThe number of times the algorithm runs on the whole training dataset. Batch It denotes the number of samples to be taken to for updating the model parameters. Learning rateIt is a param">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep Learning Term">
 <meta property="og:url" content="https://github.com/kewending/kewending.github.io/2024/04/03/Deep%20Learning%20Term/index.html">
 <meta property="og:site_name" content="Kewen Ding&#39;s Blog">
-<meta property="og:description" content="Independently and identically distributed (i.i.d.) Independent Events: When we talk about independent events, we’re referring to the relationship between observations in a sample. Independence means t">
+<meta property="og:description" content="Basic TermEpochThe number of times the algorithm runs on the whole training dataset. Batch It denotes the number of samples to be taken to for updating the model parameters. Learning rateIt is a param">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/img/Deep-Learning-Term.jpg">
 <meta property="article:published_time" content="2024-04-03T03:29:39.449Z">
-<meta property="article:modified_time" content="2024-04-03T03:32:32.973Z">
+<meta property="article:modified_time" content="2024-04-04T06:51:05.006Z">
 <meta property="article:author" content="Kewen Ding">
 <meta property="article:tag" content="Term">
 <meta property="article:tag" content="Machine-Learning">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/img/Deep-Learning-Term.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -265,7 +267,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          917 words
+          4k words
         
       </span>
     
@@ -276,7 +278,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
         
         
         
-          8 mins
+          34 mins
         
       </span>
     
@@ -327,7 +329,12 @@ gtag("config", "G-4J018EM7ZS"); </script>
             
               <div class="markdown-body">
                 
-                <h4 id="Independently-and-identically-distributed-i-i-d"><a href="#Independently-and-identically-distributed-i-i-d" class="headerlink" title="Independently and identically distributed (i.i.d.)"></a>Independently and identically distributed (i.i.d.)</h4><ol>
+                <h3 id="Basic-Term"><a href="#Basic-Term" class="headerlink" title="Basic Term"></a>Basic Term</h3><h4 id="Epoch"><a href="#Epoch" class="headerlink" title="Epoch"></a><strong>Epoch</strong></h4><p>The number of times the algorithm runs on the whole training dataset.</p>
+<h4 id="Batch"><a href="#Batch" class="headerlink" title="Batch"></a><strong>Batch</strong></h4><p> It denotes the number of samples to be taken to for updating the model parameters.</p>
+<h4 id="Learning-rate"><a href="#Learning-rate" class="headerlink" title="Learning rate"></a><strong>Learning rate</strong></h4><p>It is a parameter that provides the model a scale of how much model weights should be updated.</p>
+<h4 id="Cost-Function-x2F-Loss-Function"><a href="#Cost-Function-x2F-Loss-Function" class="headerlink" title="Cost Function&#x2F;Loss Function"></a><strong>Cost Function&#x2F;Loss Function</strong></h4><p>A cost function is used to calculate the between the predicted value and the actual value.</p>
+<h4 id="Weights-x2F-Bias"><a href="#Weights-x2F-Bias" class="headerlink" title="Weights&#x2F; Bias"></a><strong>Weights&#x2F; Bias</strong></h4><p>The learnable parameters in a model that controls the signal between two neurons.</p>
+<h3 id="Independently-and-identically-distributed-i-i-d"><a href="#Independently-and-identically-distributed-i-i-d" class="headerlink" title="Independently and identically distributed (i.i.d.)"></a>Independently and identically distributed (i.i.d.)</h3><ol>
 <li><strong>Independent Events</strong>:<ul>
 <li>When we talk about <strong>independent events</strong>, we’re referring to the relationship between observations in a sample.</li>
 <li><strong>Independence</strong> means that observing the current item does not influence or provide insight about the value of the next item you measure, or any other items in the sample.</li>
@@ -343,7 +350,50 @@ gtag("config", "G-4J018EM7ZS"); </script>
 </ul>
 </li>
 </ol>
-
+<h3 id="Overfitting-VS-Underfitting"><a href="#Overfitting-VS-Underfitting" class="headerlink" title="Overfitting VS Underfitting"></a>Overfitting VS Underfitting</h3><h4 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting:"></a><strong>Overfitting</strong>:</h4><ul>
+<li><strong>Definition</strong>: Overfitting occurs when a model becomes too specialized in learning from the training data to the point where it loses its ability to generalize well to new, unseen data.</li>
+<li><strong>Cause</strong>: The model becomes overly complex, capturing not only the underlying patterns but also the noise or random fluctuations present in the training data.</li>
+<li><strong>Result</strong>: While the model performs exceptionally well on the training data, it struggles when faced with new examples.</li>
+<li><strong>Solution</strong>: Regularization techniques (such as dropout, weight decay, or early stopping) can help mitigate overfitting by simplifying the model.</li>
+</ul>
+<h4 id="Underfitting"><a href="#Underfitting" class="headerlink" title="Underfitting"></a><strong>Underfitting</strong></h4><ul>
+<li><strong>Definition</strong>: Underfitting occurs when a model is too simplistic and fails to capture the essential patterns in the data.</li>
+<li><strong>Cause</strong>: The model lacks complexity and doesn’t adapt well to the training data.</li>
+<li><strong>Result</strong>: Both the training and test performance are subpar.</li>
+<li><strong>Solution</strong>: Increase model complexity (e.g., use a more expressive architecture) or improve feature engineering.</li>
+</ul>
+<h3 id="Optimization-Algorithms"><a href="#Optimization-Algorithms" class="headerlink" title="Optimization Algorithms"></a>Optimization Algorithms</h3><p><strong>Optimization algorithms</strong> or <strong>Optimizer</strong> play a pivotal role in fine-tuning neural network parameters throughout the training process, aiming to minimize a predefined loss function.</p>
+<h4 id="Stochastic-Gradient-Descent-SGD"><a href="#Stochastic-Gradient-Descent-SGD" class="headerlink" title="Stochastic Gradient Descent (SGD)"></a><strong>Stochastic Gradient Descent (SGD)</strong></h4><ul>
+<li><strong>Description</strong>: SGD is a fundamental optimization algorithm. It updates model parameters by computing gradients on a small batch of training data (hence “stochastic”) and adjusting weights accordingly.</li>
+<li><strong>Pros</strong>: Simplicity, computationally efficient, and widely used.</li>
+<li><strong>Cons</strong>: Prone to oscillations and slow convergence.</li>
+</ul>
+<h4 id="Mini-Batch-Gradient-Descent"><a href="#Mini-Batch-Gradient-Descent" class="headerlink" title="Mini Batch Gradient Descent"></a>Mini Batch Gradient Descent</h4><ul>
+<li><strong>Description</strong>: Mini-Batch Gradient Descent splits the training dataset into smaller batches (mini-batches) during model parameter updates. It strikes a balance between the efficiency of batch gradient descent and the noise of stochastic gradient descent.</li>
+<li><strong>Pros</strong>: Efficiency, Generalization, Parallelization, Adaptability</li>
+<li><strong>Cons</strong>: Hyperparameter Sensitivity, Noise</li>
+</ul>
+<h4 id="Adaptive-Gradient-Descent-Adagrad"><a href="#Adaptive-Gradient-Descent-Adagrad" class="headerlink" title="Adaptive Gradient Descent(Adagrad)"></a>Adaptive Gradient Descent(Adagrad)</h4><ul>
+<li><strong>Description</strong>: Adagrad adapts the learning rate for each parameter based on the historical sum of squared gradients.</li>
+<li><strong>Pros</strong>: Effective for sparse data, automatic learning rate adjustment.</li>
+<li><strong>Cons</strong>: Learning rate decreases too aggressively over time.</li>
+</ul>
+<h4 id="AdaDelta"><a href="#AdaDelta" class="headerlink" title="AdaDelta"></a><strong>AdaDelta</strong></h4><ul>
+<li><strong>Description</strong>: AdaDelta is an extension of Adagrad that addresses its aggressive learning rate decay. It uses a moving average of gradients and squared gradients.</li>
+<li><strong>Pros</strong>: No need for manual learning rate tuning.</li>
+<li><strong>Cons</strong>: Hyperparameters still need tuning.</li>
+</ul>
+<h4 id="RMSprop-Root-Mean-Square-Propagation"><a href="#RMSprop-Root-Mean-Square-Propagation" class="headerlink" title="RMSprop (Root Mean Square Propagation)"></a>RMSprop (Root Mean Square Propagation)</h4><ul>
+<li><strong>Description</strong>: RMSprop adjusts the learning rate for each parameter by dividing the gradient by the moving average of squared gradients.</li>
+<li><strong>Pros</strong>: Robust against noisy gradients, faster convergence.</li>
+<li><strong>Cons</strong>: Sensitive to hyperparameters.</li>
+</ul>
+<h4 id="Adam-Adaptive-Moment-Estimation"><a href="#Adam-Adaptive-Moment-Estimation" class="headerlink" title="Adam (Adaptive Moment Estimation)"></a>Adam (Adaptive Moment Estimation)</h4><ul>
+<li><strong>Description</strong>: Adam combines the benefits of both Adagrad and RMSprop. It adapts the learning rate for each parameter based on past gradients and squared gradients.</li>
+<li><strong>Pros</strong>: Efficient, handles sparse gradients, and converges faster.</li>
+<li><strong>Cons</strong>: Requires tuning of hyperparameters.</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
                 
               </div>
             
@@ -409,7 +459,7 @@ gtag("config", "G-4J018EM7ZS"); </script>
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>April 3, 2024</div>
+          <div>April 4, 2024</div>
         </div>
       
       <div class="license-meta-item">
@@ -437,6 +487,12 @@ gtag("config", "G-4J018EM7ZS"); </script>
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/04/04/Riddles/" title="Riddles">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Riddles</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
